@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://xc8qs014lvju"]
+
+[ext_resource type="Texture2D" uid="uid://u2dww22efjtk" path="res://assets/background.png" id="1_o5qli"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SpaceLayer" type="Parallax2D" parent="."]
+
+[node name="Space" type="TextureRect" parent="SpaceLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_o5qli")
+expand_mode = 2
+
+[node name="FarStarsLayer" type="Parallax2D" parent="."]
+
+[node name="CloseStarsLayer" type="Parallax2D" parent="."]
