@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8ojuni10lquo"]
+
+[ext_resource type="PackedScene" uid="uid://cn4e48br4jip8" path="res://effects/parallax_background.tscn" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://d3g2l6tbsri8n" path="res://states/main_menu/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://2u261e6vnq2y" path="res://states/main_menu/title.gd" id="3_3shxk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
+font_size = 72
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 12
+shadow_color = Color(0, 0, 0, 0.98039216)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_7vrkn")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_06t4h")]
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 351.0
+offset_top = 160.0
+offset_right = 855.0
+offset_bottom = 286.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Parallaxius"
+label_settings = SubResource("LabelSettings_7vrkn")
+script = ExtResource("3_3shxk")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+offset_left = 484.0
+offset_top = 286.0
+offset_right = 652.0
+offset_bottom = 405.0
+alignment = 1
+
+[node name="Play" type="Button" parent="ButtonContainer"]
+self_modulate = Color(0.3496801, 0.5119055, 1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Start Game"
+text = "Play"
+
+[node name="Exit" type="Button" parent="ButtonContainer"]
+self_modulate = Color(0.9340354, 0.00905686, 9.62615e-07, 1)
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Exit game"
+text = "Exit"
+
+[connection signal="pressed" from="ButtonContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ButtonContainer/Exit" to="." method="_on_exit_pressed"]

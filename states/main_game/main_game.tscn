@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnsrct50iix1x"]
 
-[ext_resource type="Script" uid="uid://iu7yb8yjsg7i" path="res://main.gd" id="1_ykeeq"]
+[ext_resource type="Script" uid="uid://iu7yb8yjsg7i" path="res://states/main_game/main.gd" id="1_ykeeq"]
 [ext_resource type="PackedScene" uid="uid://cn4e48br4jip8" path="res://effects/parallax_background.tscn" id="2_6bm6p"]
 [ext_resource type="PackedScene" uid="uid://d2krt1picd6ak" path="res://actors/player.tscn" id="3_dugkq"]
 
