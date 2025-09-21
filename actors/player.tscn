@@ -4,16 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://dvycr1680fxhx" path="res://assets/ship/baseship.png" id="1_niuxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_niuxy"]
-size = Vector2(17, 22)
+size = Vector2(51, 66)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_mvpqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("1_niuxy")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-0.5, 5)
+position = Vector2(-1.5, -15)
 shape = SubResource("RectangleShape2D_niuxy")
+
+[node name="LeftMuzzle" type="Marker2D" parent="."]
+position = Vector2(-23, -18)
+
+[node name="RightMuzzle" type="Marker2D" parent="."]
+position = Vector2(20, -18)
