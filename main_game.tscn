@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://xc8qs014lvju"]
+[gd_scene load_steps=6 format=3 uid="uid://dnsrct50iix1x"]
 
-[ext_resource type="Script" uid="uid://iu7yb8yjsg7i" path="res://main.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://cn4e48br4jip8" path="res://effects/parallax_background.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://d2krt1picd6ak" path="res://actors/player.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://iu7yb8yjsg7i" path="res://main.gd" id="1_ykeeq"]
+[ext_resource type="PackedScene" uid="uid://cn4e48br4jip8" path="res://effects/parallax_background.tscn" id="2_6bm6p"]
+[ext_resource type="PackedScene" uid="uid://d2krt1picd6ak" path="res://actors/player.tscn" id="3_dugkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(1152, 20)
@@ -10,12 +10,12 @@ size = Vector2(1152, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(1152, 20)
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_1bvp3")
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ykeeq")
 
-[node name="ParallaxBG" parent="." instance=ExtResource("1_ig7tw")]
+[node name="ParallaxBG" parent="." instance=ExtResource("2_6bm6p")]
 
-[node name="Player" parent="." instance=ExtResource("2_0xm2m")]
+[node name="Player" parent="." instance=ExtResource("3_dugkq")]
 position = Vector2(616, 618)
 
 [node name="UpperLimit" type="StaticBody2D" parent="." groups=["Limits"]]
