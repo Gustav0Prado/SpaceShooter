@@ -33,6 +33,7 @@ offset_left = 484.0
 offset_top = 286.0
 offset_right = 652.0
 offset_bottom = 405.0
+theme_override_constants/separation = 14
 alignment = 1
 
 [node name="Play" type="Button" parent="ButtonContainer"]

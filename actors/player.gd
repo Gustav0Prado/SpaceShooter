@@ -24,8 +24,8 @@ func move_player() -> void:
 func shoot() -> void:
 	if Input.is_action_just_pressed("action"):
 		var tween: Tween = get_tree().create_tween()
-		tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.2)
-		tween.tween_property(self, "scale", Vector2(1, 1), 0.2)
+		tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1)
+		tween.tween_property(self, "scale", Vector2(1, 1), 0.1)
 
 		var laser1: Laser = LASER.instantiate()
 		var laser2: Laser = LASER.instantiate()
